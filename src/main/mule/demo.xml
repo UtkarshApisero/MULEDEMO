@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:os="http://www.mulesoft.org/schema/mule/os" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/os http://www.mulesoft.org/schema/mule/os/current/mule-os.xsd">
+	<os:object-store name="Object_store" doc:name="Object store" doc:id="1cbe1529-bf49-437a-8f82-3ece5200228a" />
+	<flow name="demoFlow" doc:id="54252939-13c6-4a50-be9f-779707952d3a" >
+		<http:listener doc:name="Listener" doc:id="9599f93a-20ec-44e4-815e-dd94c1a5e5bd" />
+		<os:store doc:name="Store" doc:id="1698c0b2-67a0-481d-af6a-2a1d8e832397" objectStore="Object_store"/>
+	</flow>
+</mule>
